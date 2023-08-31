@@ -45,16 +45,16 @@ Scoutlar tarafından izlenen futbolcuların özelliklerine verilen puanlara gör
 
 ## Proje Aşamaları:
 
-### Görev 1: scoutium_attributes.csv ve scoutium_potential_labels.csv dosyalarını okutunuz.
-### Görev 2: Okutmuş olduğumuz CSV dosyalarını merge fonksiyonunu kullanarak birleştirelim.  ("task_response_id", 'match_id', 'evaluator_id' "player_id"  4 adet değişken üzerinden birleştirme işlemini gerçekleştiriniz.)
-### Görev 3: position_id içerisindeki Kaleci (1) sınıfını verisetinden kaldırınız.
-### Görev 4: potential_label içerisindeki below_average sınıfını verisetinden kaldırınız.( below_average sınıfı  tüm verisetinin %1'ini oluşturur)
-### Görev 5: Oluşturduğunuz verisetinden “pivot_table” fonksiyonunu kullanarak bir tablo oluşturunuz. Bu pivot table'da her satır bir oyuncu olacak şekilde manipülasyon yapınız.
-1. Her sütunda oyuncunun “position_id”, “potential_label” ve her oyuncunun sırayla bütün “attribute_idleri” içerecek şekilde işlem yapınız.
-2. “reset_index” fonksiyonunu kullanarak index hatasından kurtulunuz ve “attribute_id” sütunlarının isimlerini stringe çeviriniz. (df.columns.map(str))
-
-### Görev 6:  Label Encoder fonksiyonunu kullanarak “potential_label” kategorilerini (average, highlighted) sayısal olarak ifade ediniz.
-### Görev 7: Sayısal değişken kolonlarını “num_cols” adıyla bir listeye kaydediniz.
-### Görev 8: Kaydettiğiniz bütün “num_cols” değişkenlerindeki veriyi ölçeklendirmek için standardScaler uygulayınız.
-### Görev 9: Elimizdeki veri seti üzerinden minimum hata ile futbolcuların potansiyel etiketlerini tahmin eden bir makine öğrenmesi modeli geliştiriniz.
-### Görev 10: Değişkenlerin önem düzeyini belirten feature_importance fonksiyonunu kullanarak özelliklerin sıralamasını çizdiriniz.
+- scoutium_attributes.csv ve scoutium_potential_labels.csv dosyalarının okunması.
+- Okutulan CSV dosyalarını, merge fonksiyonu kullanılarak birleştirilmesi.  ("task_response_id", 'match_id', 'evaluator_id' "player_id"  4 adet değişken üzerinden birleştirme işlemini gerçekleştiriniz.)
+- position_id içerisindeki Kaleci (1) sınıfının verisetinden kaldırılması.
+- potential_label içerisindeki below_average sınıfının verisetinden kaldırılması.( below_average sınıfı  tüm verisetinin %1'ini oluşturur)
+- oluşturulan verisetinden, “pivot_table” fonksiyonu kullanılarak yeni bir tablo oluşturulması ve
+- oluşturulan pivot table'da her satır, bir oyuncu olacak şekilde manipülasyon yapılması.
+- Her sütunda oyuncunun “position_id”, “potential_label” ve her oyuncunun sırayla bütün “attribute_idleri” içerecek şekilde işlem yapılması.
+- “reset_index” fonksiyonu kullanılarak index hatasından kurtulunması ve “attribute_id” sütun isimlerinin stringe çevrilmesi. (df.columns.map(str))
+- Label Encoder fonksiyonu kullanılarak “potential_label” kategorilerinin (average, highlighted) sayısal olarak ifade edilmesi.
+- Sayısal değişken kolonlarını “num_cols” adıyla bir listeye kaydedilmesi.
+- Kaydedilen bütün “num_cols” değişkenlerindeki veriyi ölçeklendirmek için standardScaler uygulanması.
+- Elde edilen veri seti üzerinden minimum hata ile futbolcuların potansiyel etiketlerini tahmin eden bir makine öğrenmesi modelinin geliştirilmesi.
+- Değişkenlerin önem düzeyini belirten feature_importance fonksiyonunun kullanılmasıyla özelliklerin sıralamasının çizilmesi.
